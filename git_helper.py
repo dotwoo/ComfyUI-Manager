@@ -281,6 +281,8 @@ def invalidate_custom_node_file(file_custom_node_infos):
                 if not os.path.exists(target_path) and filename in py_to_url:
                     url = py_to_url[filename]
                     print(f"DOWNLOAD: {filename}")
+                    if url.startswith('https://github.com') or url.startswith('https://raw.githubusercontent.com'):
+                        url=f"https://gh.idayer.com/{url}"
                     download_url(url, working_directory)
 
 

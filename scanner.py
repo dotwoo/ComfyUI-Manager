@@ -372,6 +372,8 @@ def update_custom_nodes():
             node_info[name] = (url, title, preemptions, node_pattern)
 
         try:
+            if url.startswith('https://github.com') or url.startswith('https://raw.githubusercontent.com'):
+                url=f"https://gh.idayer.com/{url}"
             download_url(url, temp_dir)
         except:
             print(f"[ERROR] Cannot download '{url}'")

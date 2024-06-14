@@ -687,6 +687,8 @@ def download_url_with_agent(url, save_path):
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
 
+        if url.startswith('https://github.com') or url.startswith('https://raw.githubusercontent.com'):
+                    url=f"https://gh.idayer.com/{url}"
         req = urllib.request.Request(url, headers=headers)
         response = urllib.request.urlopen(req)
         data = response.read()
@@ -710,6 +712,8 @@ def copy_install(files, js_path_name=None):
         if url.endswith("/"):
             url = url[:-1]
         try:
+            if url.startswith('https://github.com') or url.startswith('https://raw.githubusercontent.com'):
+                    url=f"https://gh.idayer.com/{url}"
             if url.endswith(".py"):
                 download_url(url, core.custom_nodes_path)
             else:
@@ -1000,6 +1004,10 @@ async def install_model(request):
             if not core.get_config()['model_download_by_agent'] and (
                     model_url.startswith('https://github.com') or model_url.startswith('https://huggingface.co') or model_url.startswith('https://heibox.uni-heidelberg.de')):
                 model_dir = get_model_dir(json_data)
+                if model_url.startswith('https://github.com') :
+                    model_url=f"https://gh.idayer.com/{model_url}"
+                if model_url.startswith('https://huggingface.co'):
+                    model_url=model_url.replace('https://huggingface.co/','https://hf-mirror.com/')
                 download_url(model_url, model_dir, filename=json_data['filename'])
                 if model_path.endswith('.zip'):
                     res = core.unzip(model_path)
