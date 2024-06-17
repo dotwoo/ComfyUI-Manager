@@ -9,6 +9,73 @@
             "description": "If you see this message, your ComfyUI-Manager is outdated.\nDev channel provides only the list of the developing nodes. If you want to find the complete node list, please go to the Default channel."
         },
 
+
+
+
+        {
+            "author": "horidream",
+            "title": "ComfyUI-Horidream",
+            "id": "horidream",
+            "reference": "https://github.com/horidream/ComfyUI-Horidream",
+            "files": [
+                "https://github.com/horidream/ComfyUI-Horidream"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:Pass Through With Sound."
+        },
+        {
+            "author": "kijai",
+            "title": "ComfyUI-DiffusersSD3Wrapper",
+            "id": "diffusers-sd3-wrapper",
+            "reference": "https://github.com/kijai/ComfyUI-DiffusersSD3Wrapper",
+            "files": [
+                "https://github.com/kijai/ComfyUI-DiffusersSD3Wrapper"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:Load SD3DiffusersPipeline, SD3 ControlNet Sampler"
+        },
+        {
+            "author": "AustinMroz",
+            "title": "ComfyUI-SD3-Medium-CN-Diffusers [WIP]",
+            "reference": "https://github.com/ZHO-ZHO-ZHO/ComfyUI-SD3-Medium-CN-Diffusers",
+            "files": [
+                "https://github.com/AustinMroz/ComfyUI-WorkflowCheckpointing"
+            ],
+            "install_type": "git-clone",
+            "description": "ComfyUI SD3-Medium ControlNet (Diffusers)"
+        },
+        {
+            "author": "AustinMroz",
+            "title": "ComfyUI-WorkflowCheckpointing [WIP]",
+            "reference": "https://github.com/AustinMroz/ComfyUI-WorkflowCheckpointing",
+            "files": [
+                "https://github.com/AustinMroz/ComfyUI-WorkflowCheckpointing"
+            ],
+            "install_type": "git-clone",
+            "description": "Automatically creates checkpoints during workflow execution. If If an workflow is canceled or ComfyUI crashes mid-execution, then these checkpoints are used when the workflow is re-queued to resume execution with minimal progress loss."
+        },
+        {
+            "author": "redhottensors",
+            "title": "ComfyUI-ODE",
+            "id": "ode",
+            "reference": "https://github.com/redhottensors/ComfyUI-ODE",
+            "files": [
+                "https://github.com/redhottensors/ComfyUI-ODE"
+            ],
+            "install_type": "git-clone",
+            "description": "ODE Solvers for ComfyUI\nThis node enables use of torchdiffeq ODE solvers with models.  Intended for use with Stable Diffusion 3 and similar flow models."
+        },
+        {
+            "author": "maruhidd",
+            "title": "Transparent Background for ComfyUI",
+            "id": "transparent-bg",
+            "reference": "https://github.com/maruhidd/ComfyUI_Transparent-Background",
+            "files": [
+                "https://github.com/maruhidd/ComfyUI_Transparent-Background"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:Remove Background, Fill Transparent"
+        },
         {
             "author": "baicai99",
             "title": "ComfyUI-FrameSkipping",
@@ -33,7 +100,7 @@
         },
         {
             "author": "jtydhr88",
-            "title": "ComfyUI-Unique3D",
+            "title": "ComfyUI-Unique3D [WIP]",
             "id": "unique3d",
             "reference": "https://github.com/jtydhr88/ComfyUI-Unique3D",
             "files": [
@@ -204,17 +271,6 @@
             ],
             "install_type": "git-clone",
             "description": "I've been working on the UX/UI of a timeline custom node system for ComfyUI over the past two weeks. The goal is to create a timeline similar to video/animation editing tools, without relying on traditional timeframe code. You can effortlessly add, delete, or rearrange rows, providing a streamlined user experience."
-        },
-        {
-            "author": "udi0510",
-            "title": "comfyui-slicer",
-            "id": "slicer",
-            "reference": "https://github.com/udi0510/comfyui-slicer",
-            "files": [
-                "https://github.com/udi0510/comfyui-slicer"
-            ],
-            "install_type": "git-clone",
-            "description": "Nodes:SlicerNode"
         },
         {
             "author": "jh-leon-kim",

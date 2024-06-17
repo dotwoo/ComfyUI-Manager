@@ -267,6 +267,14 @@
             "title_aux": "ComfyUI-Live2DViewer"
         }
     ],
+    "https://github.com/AIFSH/ComfyUI-MimicBrush": [
+        [
+            "MimicBrushNode"
+        ],
+        {
+            "title_aux": "ComfyUI-MimicBrush"
+        }
+    ],
     "https://github.com/AIFSH/ComfyUI-MuseTalk_FSH": [
         [
             "CombineAudioVideo",
@@ -1159,6 +1167,7 @@
         [
             "AdvancedPromptInjection",
             "PromptInjection",
+            "SVDPromptInjection",
             "SimplePromptInjection"
         ],
         {
@@ -1537,6 +1546,7 @@
             "DWPreprocessor",
             "DensePosePreprocessor",
             "DepthAnythingPreprocessor",
+            "DepthAnythingV2Preprocessor",
             "DiffusionEdge_Preprocessor",
             "FacialPartColoringFromPoseKps",
             "FakeScribblePreprocessor",
@@ -1558,6 +1568,7 @@
             "MeshGraphormer-DepthMapPreprocessor",
             "Metric3D-DepthMapPreprocessor",
             "Metric3D-NormalMapPreprocessor",
+            "Metric_DepthAnythingV2Preprocessor",
             "MiDaS-DepthMapPreprocessor",
             "MiDaS-NormalMapPreprocessor",
             "OneFormer-ADE20K-SemSegPreprocessor",
@@ -1757,6 +1768,18 @@
         ],
         {
             "title_aux": "NX_PromptStyler"
+        }
+    ],
+    "https://github.com/G-370/ComfyUI-SD3-Powerlab": [
+        [
+            "G370SD3PowerLab_AttentionToImage",
+            "G370SD3PowerLab_ImageIntoAttention",
+            "G370SD3PowerLab_ImageIntoLayer",
+            "G370SD3PowerLab_LayerToImage",
+            "G370SD3PowerLab_RenderAttention"
+        ],
+        {
+            "title_aux": "ComfyUI-SD3-Powerlab"
         }
     ],
     "https://github.com/GMapeSplat/ComfyUI_ezXY": [
@@ -2754,6 +2777,7 @@
             "MaraScottDisplayInfoNode",
             "MaraScottDisplayInfo_v1",
             "MaraScottPasteInpaintingByMask_v1",
+            "MaraScottPromptFromImage_v1",
             "MaraScottSetInpaintingByMask_v1",
             "MaraScottUpscalerRefinerNode_v2",
             "MaraScottUpscalerRefinerNode_v3",
@@ -2858,6 +2882,7 @@
             "HueSatLum",
             "HueShift",
             "ImageDimensions",
+            "ImageOverlayResized",
             "ImageResizeLong",
             "ImageZigzag",
             "IndoorBackgrounds",
@@ -3767,6 +3792,14 @@
             "title_aux": "ComfyUI-SVDResizer"
         }
     ],
+    "https://github.com/ShmuelRonen/ComfyUI_Gemini_Flash": [
+        [
+            "Gemini_Flash"
+        ],
+        {
+            "title_aux": "ComfyUI_Gemini_Flash"
+        }
+    ],
     "https://github.com/ShmuelRonen/ComfyUI_wav2lip": [
         [
             "Wav2Lip"
@@ -3959,6 +3992,15 @@
         ],
         {
             "title_aux": "ComfyUI-SuperBeasts"
+        }
+    ],
+    "https://github.com/SuperMasterBlasterLaser/ComfyUI_YOLO_Classifiers": [
+        [
+            "YOLO Classifier Model Loader",
+            "YOLO Classify"
+        ],
+        {
+            "title_aux": "ComfyUI_YOLO_Classifiers"
         }
     ],
     "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes": [
@@ -4599,6 +4641,14 @@
                 "NNLatentUpscale"
             ],
             "title_aux": "ComfyUI Neural Network Latent Upscale"
+        }
+    ],
+    "https://github.com/TylerZoro/SD3-Scaling": [
+        [
+            "SD3ImageScaleToTotalPixels"
+        ],
+        {
+            "title_aux": "SD3-Scaling"
         }
     ],
     "https://github.com/Umikaze-job/select_folder_path_easy": [
@@ -5847,6 +5897,18 @@
             "title_aux": "LoRA Tag Loader for ComfyUI"
         }
     ],
+    "https://github.com/baicai99/ComfyUI-FrameSkipping": [
+        [
+            "FrameSkipping",
+            "FrameTruncating",
+            "IntOperationsNode",
+            "MaskFrameSkipping",
+            "WhiteMaskGenerator"
+        ],
+        {
+            "title_aux": "ComfyUI-FrameSkipping"
+        }
+    ],
     "https://github.com/banodoco/steerable-motion": [
         [
             "BatchCreativeInterpolation",
@@ -5912,6 +5974,7 @@
             "Range Integer",
             "Ratio Advanced",
             "Resize Image for SDXL",
+            "SD3TextConditioningWithOptionsOnePrompt",
             "SRFloatPromptInput",
             "SRIntPromptInput",
             "SRStringPromptInput",
@@ -6974,6 +7037,7 @@
             "LayerUtility: BatchSelector",
             "LayerUtility: Boolean",
             "LayerUtility: BooleanOperator",
+            "LayerUtility: BooleanOperatorV2",
             "LayerUtility: ColorImage",
             "LayerUtility: ColorImage V2",
             "LayerUtility: ColorPicker",
@@ -6991,6 +7055,7 @@
             "LayerUtility: GradientImage",
             "LayerUtility: GradientImage V2",
             "LayerUtility: HLFrequencyDetailRestore",
+            "LayerUtility: If",
             "LayerUtility: ImageAutoCrop",
             "LayerUtility: ImageAutoCrop V2",
             "LayerUtility: ImageBlend",
@@ -7016,6 +7081,7 @@
             "LayerUtility: LayerMaskTransform",
             "LayerUtility: LoadPSD",
             "LayerUtility: NumberCalculator",
+            "LayerUtility: NumberCalculatorV2",
             "LayerUtility: PrintInfo",
             "LayerUtility: PromptEmbellish",
             "LayerUtility: PromptTagger",
@@ -7028,6 +7094,7 @@
             "LayerUtility: Seed",
             "LayerUtility: ShowBlindWaterMark",
             "LayerUtility: SimpleTextImage",
+            "LayerUtility: StringCondition",
             "LayerUtility: TextBox",
             "LayerUtility: TextImage",
             "LayerUtility: TextJoin",
@@ -7235,6 +7302,7 @@
             "PixArtLoraLoader",
             "PixArtResolutionCond",
             "PixArtResolutionSelect",
+            "PixArtT5FromSD3CLIP",
             "PixArtT5TextEncode",
             "T5TextEncode",
             "T5v11Loader"
@@ -7351,6 +7419,7 @@
             "DualCFGGuider",
             "DualCLIPLoader",
             "EmptyImage",
+            "EmptyLatentAudio",
             "EmptyLatentImage",
             "EmptySD3LatentImage",
             "ExponentialScheduler",
@@ -7404,6 +7473,7 @@
             "LatentSubtract",
             "LatentUpscale",
             "LatentUpscaleBy",
+            "LoadAudio",
             "LoadImage",
             "LoadImageMask",
             "LoadLatent",
@@ -7419,6 +7489,7 @@
             "ModelMergeSimple",
             "ModelMergeSubtract",
             "ModelSamplingContinuousEDM",
+            "ModelSamplingContinuousV",
             "ModelSamplingDiscrete",
             "ModelSamplingSD3",
             "ModelSamplingStableCascade",
@@ -7453,6 +7524,7 @@
             "SamplerLMS",
             "SaveAnimatedPNG",
             "SaveAnimatedWEBP",
+            "SaveAudio",
             "SaveImage",
             "SaveImageWebsocket",
             "SaveLatent",
@@ -7479,8 +7551,10 @@
             "UNetTemporalAttentionMultiply",
             "UpscaleModelLoader",
             "VAEDecode",
+            "VAEDecodeAudio",
             "VAEDecodeTiled",
             "VAEEncode",
+            "VAEEncodeAudio",
             "VAEEncodeForInpaint",
             "VAEEncodeTiled",
             "VAELoader",
@@ -7726,6 +7800,7 @@
             "PixelOEPixelize+",
             "RemBGSession+",
             "RemoveLatentMask+",
+            "SD3NegativeConditioning+",
             "SDXLEmptyLatentSizePicker+",
             "SimpleMath+",
             "TransitionMask+"
@@ -7803,6 +7878,7 @@
     ],
     "https://github.com/dagthomas/comfyui_dagthomas": [
         [
+            "PGSD3LatentGenerator",
             "PromptGenerator"
         ],
         {
@@ -7884,14 +7960,17 @@
     "https://github.com/daxcay/ComfyUI-DataSet": [
         [
             "DATASET_CaptionVisualizer",
+            "DATASET_OpenAIChat",
+            "DATASET_OpenAIChatImage",
             "DATASET_SearchAndReplace",
+            "DATASET_TXTFileLoader",
             "DATASET_TXTFileSaver",
             "DATASET_TagManipulatorByImageNames",
             "DATASET_xCopy"
         ],
         {
             "author": "Daxton Caylor",
-            "description": "Data Research And Manipulators Nodes for Model Trainers, Artists, Designers and Animators.",
+            "description": "Data Research, Preparation And Manipulators Nodes for Model Trainers, Artists, Designers and Animators.",
             "nickname": "ComfyUI-DataSet",
             "title": "ComfyUI-DataSet",
             "title_aux": "ComfyUI-DataSet"
@@ -8042,6 +8121,20 @@
         ],
         {
             "title_aux": "ComfyUI Frame Maker"
+        }
+    ],
+    "https://github.com/dicksondickson/ComfyUI-Dickson-Nodes": [
+        [
+            "DicksonColorMatch",
+            "TTPlanet_Tile_Preprocessor_GF",
+            "TTPlanet_Tile_Preprocessor_Simple",
+            "TTPlanet_Tile_Preprocessor_cufoff"
+        ],
+        {
+            "description": "This is a set of custom nodes that I've either written myself or adapted from other authors for my own convenience. Currently includes color matching node forked from StableSR and TTPlanet's controlnet preprocessor. https://github.com/dicksondickson",
+            "nickname": "Dickson Nodes",
+            "title": "Dickson Nodes",
+            "title_aux": "ComfyUI-Dickson-Nodes"
         }
     ],
     "https://github.com/digitaljohn/comfyui-propost": [
@@ -9140,11 +9233,11 @@
     ],
     "https://github.com/gonzalu/ComfyUI_YFG_Comical": [
         [
-            "Image10SwitcherNode",
-            "Image15SwitcherNode",
-            "Image20SwitcherNode",
-            "Image3SwitcherNode",
-            "Image5SwitcherNode",
+            "Image10Switcher_node",
+            "Image15Switcher_node",
+            "Image20Switcher_node",
+            "Image3Switcher_node",
+            "Image5Switcher_node",
             "MonoClip_node",
             "PixelArt_node",
             "VAEDecodePreview_node",
@@ -9155,8 +9248,9 @@
             "image_histograms_node_compact",
             "images_side_by_side",
             "imgbbLoader_node",
-            "smart_checkpoint_loader",
-            "storeURL_node"
+            "smartCheckpointLoader_node",
+            "storeURL_node",
+            "textMaskOverlay_node"
         ],
         {
             "author": "YFG",
@@ -9356,6 +9450,7 @@
             "feishu_tool",
             "file_combine",
             "file_combine_plus",
+            "get_string",
             "github_tool",
             "google_tool",
             "interpreter_tool",
@@ -9363,10 +9458,13 @@
             "load_excel",
             "load_file",
             "load_file_folder",
+            "load_name",
             "load_persona",
             "load_url",
             "load_wikipedia",
             "new_interpreter_tool",
+            "omost_decode",
+            "omost_setting",
             "openai_tts",
             "play_audio",
             "show_text_party",
@@ -10251,6 +10349,15 @@
             "title_aux": "ComfyUI-DDColor"
         }
     ],
+    "https://github.com/kijai/ComfyUI-DepthAnythingV2": [
+        [
+            "DepthAnything_V2",
+            "DownloadAndLoadDepthAnythingV2Model"
+        ],
+        {
+            "title_aux": "ComfyUI-DepthAnythingV2"
+        }
+    ],
     "https://github.com/kijai/ComfyUI-DiffusionLight": [
         [
             "chrome_ball_to_envmap",
@@ -10322,6 +10429,7 @@
             "BboxToInt",
             "BboxVisualize",
             "CameraPoseVisualizer",
+            "CheckpointPerturbWeights",
             "ColorMatch",
             "ColorToMask",
             "CondPassThrough",
@@ -10749,6 +10857,14 @@
             "title_aux": "ComfyUI-AutoCropFaces"
         }
     ],
+    "https://github.com/liusida/ComfyUI-B-LoRA": [
+        [
+            "LoadBLoRA"
+        ],
+        {
+            "title_aux": "ComfyUI-B-LoRA"
+        }
+    ],
     "https://github.com/liusida/ComfyUI-Debug": [
         [
             "DebugInspectorNode",
@@ -10769,7 +10885,8 @@
     ],
     "https://github.com/liusida/ComfyUI-SD3-nodes": [
         [
-            "SD3CombineClips",
+            "SD3EmptyLatent",
+            "SD3LoadCLIPs",
             "SD3LoadCheckpoint"
         ],
         {
@@ -10857,20 +10974,11 @@
     "https://github.com/logtd/ComfyUI-FLATTEN": [
         [
             "ApplyFlattenAttentionNode",
-            "ApplyFlattenAttentionSD3MNode",
             "CreateFlowNoiseNode",
             "FlattenCheckpointLoaderNode",
             "KSamplerFlattenNode",
             "TrajectoryNode",
             "UnsamplerFlattenNode"
-        ],
-        {
-            "title_aux": "ComfyUI-FLATTEN"
-        }
-    ],
-    "https://github.com/logtd/ComfyUI-FlattenFlow": [
-        [
-            "SampleFlowTrajectoriesNode"
         ],
         {
             "title_aux": "ComfyUI-FLATTEN"
@@ -10967,6 +11075,8 @@
             "Mask Change DType",
             "Mask Change Device",
             "Mask Selection Of Masks",
+            "Model Change Device",
+            "Model Change Device Repeaters",
             "Output Image To Input",
             "Split Masks"
         ],
@@ -11573,6 +11683,7 @@
             "PettyPaintEnsureDirectory",
             "PettyPaintExec",
             "PettyPaintFakeConvert",
+            "PettyPaintFileExists",
             "PettyPaintImageColorsToMasks",
             "PettyPaintImageCompositeMasked",
             "PettyPaintImagePlacement",
@@ -11588,6 +11699,8 @@
             "PettyPaintLoadImages",
             "PettyPaintMap",
             "PettyPaintMasksToImages",
+            "PettyPaintNot",
+            "PettyPaintPassThroughNode",
             "PettyPaintProcessor",
             "PettyPaintRemoveAddText",
             "PettyPaintSDTurboScheduler",
@@ -11754,6 +11867,14 @@
         ],
         {
             "title_aux": "ComfyUI_FastVAEDecorder_SDXL"
+        }
+    ],
+    "https://github.com/nagolinc/comfyui_openai_node": [
+        [
+            "OpenAINode"
+        ],
+        {
+            "title_aux": "comfyui_openai_node"
         }
     ],
     "https://github.com/natto-maki/ComfyUI-NegiTools": [
@@ -12680,12 +12801,21 @@
             "title_aux": "Consistency Decoder"
         }
     ],
+    "https://github.com/shadowcz007/comfyui-edit-mask": [
+        [
+            "EditMask"
+        ],
+        {
+            "title_aux": "comfyui-edit-mask"
+        }
+    ],
     "https://github.com/shadowcz007/comfyui-mixlab-nodes": [
         [
             "3DImage",
             "AppInfo",
             "ApplyVisualStylePrompting_",
             "AreaToMask",
+            "AudioPlay",
             "CenterImage",
             "CharacterInText",
             "ChatGPTOpenAI",
@@ -12719,7 +12849,6 @@
             "LoadImagesFromPath",
             "LoadImagesFromURL",
             "LoadImagesToBatch",
-            "LoadTripoSRModel_",
             "LoraNames_",
             "LoraPrompt",
             "MaskListMerge_",
@@ -12739,7 +12868,6 @@
             "SamplerNames_",
             "SaveImageAndMetadata_",
             "SaveImageToLocal",
-            "SaveTripoSRMesh",
             "ScreenShare",
             "Seed_",
             "ShowLayer",
@@ -12761,7 +12889,6 @@
             "TextSplitByDelimiter",
             "TextToNumber",
             "TransparentImage",
-            "TripoSRSampler_",
             "VAEDecodeConsistencyDecoder",
             "VAELoaderConsistencyDecoder"
         ],
@@ -13196,7 +13323,8 @@
             "ShuffleChannels",
             "Tonemap",
             "UnJitterImage",
-            "UnTonemap"
+            "UnTonemap",
+            "VisualizeLatents"
         ],
         {
             "title_aux": "ComfyUI-Image-Filters"
@@ -14282,6 +14410,7 @@
             "easy humanSegmentation",
             "easy icLightApply",
             "easy if",
+            "easy imageBatchToImageList",
             "easy imageChooser",
             "easy imageColorMatch",
             "easy imageConcat",
@@ -14290,6 +14419,7 @@
             "easy imageDetailTransfer",
             "easy imageInsetCrop",
             "easy imageInterrogator",
+            "easy imageListToImageBatch",
             "easy imagePixelPerfect",
             "easy imageRatio",
             "easy imageRemBg",
@@ -14644,6 +14774,15 @@
         ],
         {
             "title_aux": "EasyCaptureNode for ComfyUI"
+        }
+    ],
+    "https://github.com/zhulu111/ComfyUI_Bxb": [
+        [
+            "sdBxb",
+            "sdBxb_textInput"
+        ],
+        {
+            "title_aux": "ComfyUI_Bxb"
         }
     ],
     "https://github.com/zohac/ComfyUI_ZC_DrawShape": [
