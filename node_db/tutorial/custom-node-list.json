@@ -199,6 +199,26 @@
             ],
             "install_type": "git-clone",
             "description": "Nodes:jtong.Highway, Example"
+        },
+        {
+            "author": "thinkthinking",
+            "title": "ComfyUI-Ye",
+            "reference": "https://github.com/thinkthinking/ComfyUI-Ye",
+            "files": [
+                "https://github.com/thinkthinking/ComfyUI-Ye"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:Signature|Ye, CheckpointLoader|Ye, PrintHelloWorld|Ye."
+        },
+        {
+            "author": "BoosterCore",
+            "title": "ComfyUI-BC-Experimental",
+            "reference": "https://github.com/BoosterCore/ComfyUI-BC-Experimental",
+            "files": [
+                "https://github.com/BoosterCore/ComfyUI-BC-Experimental"
+            ],
+            "install_type": "git-clone",
+            "description": "Nodes:ClipTextEncodeBC, SaveAnyText, SimpleText"
         }
     ]
 }

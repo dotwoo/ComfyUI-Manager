@@ -42,7 +42,7 @@ from comfy.cli_args import args
 import latent_preview
 
 
-is_local_mode = args.listen.startswith('127.')
+is_local_mode = args.listen.startswith('127.') or args.listen.startswith('local.')
 
 
 def is_allowed_security_level(level):
@@ -106,7 +106,7 @@ core.manager_funcs = ManagerFuncsInComfyUI()
 
 sys.path.append('../..')
 
-from torchvision.datasets.utils import download_url
+from manager_downloader import download_url
 
 core.comfy_path = os.path.dirname(folder_paths.__file__)
 core.js_path = os.path.join(core.comfy_path, "web", "extensions")
@@ -1136,6 +1136,19 @@ async def channel_url_list(request):
     return web.Response(status=200)
 
 
+def add_target_blank(html_text):
+    pattern = r'(<a\s+href="[^"]*"\s*[^>]*)(>)'
+
+    def add_target(match):
+        if 'target=' not in match.group(1):
+            return match.group(1) + ' target="_blank"' + match.group(2)
+        return match.group(0)
+
+    modified_html = re.sub(pattern, add_target, html_text)
+
+    return modified_html
+
+
 @PromptServer.instance.routes.get("/manager/notice")
 async def get_notice(request):
     url = "github.com"
@@ -1155,6 +1168,8 @@ async def get_notice(request):
                     markdown_content += f"<HR>ComfyUI: {core.comfy_ui_revision}[{comfy_ui_hash[:6]}]({core.comfy_ui_commit_datetime.date()})"
                     # markdown_content += f"<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;()"
                     markdown_content += f"<BR>Manager: {core.version_str}"
+
+                    markdown_content = add_target_blank(markdown_content)
 
                     try:
                         if core.comfy_ui_required_commit_datetime.date() > core.comfy_ui_commit_datetime.date():

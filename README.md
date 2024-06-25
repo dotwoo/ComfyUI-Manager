@@ -315,6 +315,8 @@ NODE_CLASS_MAPPINGS.update({
   * When you create the `pip_overrides.json` file, it changes the installation of specific pip packages to installations defined by the user.
     * Please refer to the `pip_overrides.json.template` file.
     
+* Use `aria2` as downloader
+  * [howto](docs/en/use_aria2.md)
 
 ## Scanner
 When you run the `scan.sh` script:
@@ -380,6 +382,7 @@ When you run the `scan.sh` script:
 * https://github.com/SimithWang/comfyui-renameImages
 * https://github.com/icefairy64/comfyui-model-tilt
 * https://github.com/andrewharp/ComfyUI-EasyNodes
+* https://github.com/SimithWang/comfyui-renameImages
 
 ## Roadmap
 
@@ -391,10 +394,10 @@ When you run the `scan.sh` script:
 - [ ] Auto migration for custom nodes with changed structures.
 - [ ] Version control feature for nodes.
 - [ ] List of currently used custom nodes.
-- [ ] Download support multiple model download.
-- [ ] Model download via url.
+- [x] Download support multiple model download.
+- [x] Model download via url.
 - [x] List sorting (custom nodes).
-- [ ] List sorting (model).
+- [x] List sorting (model).
 - [ ] Provides description of node.
 
 
