@@ -15,28 +15,8 @@ import sys
 from urllib.parse import urlparse
 from github import Github
 
-
-def download_url(url, dest_folder, filename=None):
-    # Ensure the destination folder exists
-    if not os.path.exists(dest_folder):
-        os.makedirs(dest_folder)
-
-    # Extract filename from URL if not provided
-    if filename is None:
-        filename = os.path.basename(url)
-
-    # Full path to save the file
-    dest_path = os.path.join(dest_folder, filename)
-
-    # Download the file
-    response = requests.get(url, stream=True)
-    if response.status_code == 200:
-        with open(dest_path, 'wb') as file:
-            for chunk in response.iter_content(chunk_size=1024):
-                if chunk:
-                    file.write(chunk)
-    else:
-        raise Exception(f"Failed to download file from {url}")
+sys.path.append(os.path.join(os.path.dirname(__file__), "glob"))
+from manager_downloader import download_url
 
 
 # prepare temp dir
@@ -396,8 +376,6 @@ def update_custom_nodes():
             node_info[name] = (url, title, preemptions, node_pattern)
 
         try:
-            if url.startswith('https://github.com') or url.startswith('https://raw.githubusercontent.com'):
-                url=f"https://gh.idayer.com/{url}"
             download_url(url, temp_dir)
         except:
             print(f"[ERROR] Cannot download '{url}'")

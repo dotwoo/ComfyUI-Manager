@@ -8,13 +8,17 @@ import configparser
 import re
 import json
 import yaml
-from torchvision.datasets.utils import download_url
+
 from tqdm.auto import tqdm
 from git.remote import RemoteProgress
+
+sys.path.append(os.path.join(os.path.dirname(__file__), "glob"))
+from manager_downloader import download_url
 
 config_path = os.path.join(os.path.dirname(__file__), "config.ini")
 nodelist_path = os.path.join(os.path.dirname(__file__), "custom-node-list.json")
 working_directory = os.getcwd()
+
 
 if os.path.basename(working_directory) != 'custom_nodes':
     print(f"WARN: This script should be executed in custom_nodes dir")
@@ -281,8 +285,6 @@ def invalidate_custom_node_file(file_custom_node_infos):
                 if not os.path.exists(target_path) and filename in py_to_url:
                     url = py_to_url[filename]
                     print(f"DOWNLOAD: {filename}")
-                    if url.startswith('https://github.com') or url.startswith('https://raw.githubusercontent.com'):
-                        url=f"https://gh.idayer.com/{url}"
                     download_url(url, working_directory)
 
 

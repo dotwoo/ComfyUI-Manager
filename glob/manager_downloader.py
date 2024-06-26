@@ -2,6 +2,7 @@ import os
 
 aria2 = os.getenv('COMFYUI_MANAGER_ARIA2_SERVER')
 HF_ENDPOINT = os.getenv('HF_ENDPOINT')
+GH_PROXY = os.getenv('GH_PROXY')
 
 if aria2 is not None:
     secret = os.getenv('COMFYUI_MANAGER_ARIA2_SECRET')
@@ -12,11 +13,16 @@ if aria2 is not None:
 
 
 def download_url(model_url: str, model_dir: str, filename: str):
+    if GH_PROXY:
+        if model_url.startswith('https://github.com') or model_url.startswith('https://raw.githubusercontent.com'):
+            model_url=f"{GH_PROXY}/{model_url}"
+    if HF_ENDPOINT:
+        model_url=model_url.replace('https://huggingface.co/','https://hf-mirror.com/')
+
     if aria2:
         return aria2_download_url(model_url, model_dir, filename)
     else:
         from torchvision.datasets.utils import download_url as torchvision_download_url
-
         return torchvision_download_url(model_url, model_dir, filename)
 
 
@@ -41,8 +47,6 @@ def aria2_download_url(model_url: str, model_dir: str, filename: str):
     if model_dir.startswith(core.comfy_path):
         model_dir = model_dir[len(core.comfy_path) :]
 
-    if HF_ENDPOINT:
-        model_url = model_url.replace('https://huggingface.co', HF_ENDPOINT)
 
     download_dir = model_dir if model_dir.startswith('/') else os.path.join('/models', model_dir)
 
