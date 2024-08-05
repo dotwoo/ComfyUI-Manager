@@ -1,4 +1,5 @@
 import os
+from urllib.parse import urlparse
 
 aria2 = os.getenv('COMFYUI_MANAGER_ARIA2_SERVER')
 HF_ENDPOINT = os.getenv('HF_ENDPOINT')
@@ -6,7 +7,9 @@ GH_PROXY = os.getenv('GH_PROXY')
 
 if aria2 is not None:
     secret = os.getenv('COMFYUI_MANAGER_ARIA2_SECRET')
-    host, port = aria2.split(':')
+    url = urlparse(aria2)
+    port = url.port
+    host = url.scheme + '://' + url.hostname
     import aria2p
 
     aria2 = aria2p.API(aria2p.Client(host=host, port=port, secret=secret))

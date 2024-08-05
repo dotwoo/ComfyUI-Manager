@@ -40,6 +40,7 @@ cm_global.pip_overrides = {}
 if os.path.exists(pip_overrides_path):
     with open(pip_overrides_path, 'r', encoding="UTF-8", errors="ignore") as json_file:
         cm_global.pip_overrides = json.load(json_file)
+        cm_global.pip_overrides['numpy'] = 'numpy<2'
 
 
 def check_comfyui_hash():
@@ -201,7 +202,7 @@ cm_ctx = Ctx()
 
 
 def install_node(node_name, is_all=False, cnt_msg=''):
-    if '://' in node_name:
+    if core.is_valid_url(node_name):
         # install via urls
         res = core.gitclone_install([node_name])
         if not res:

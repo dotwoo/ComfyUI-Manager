@@ -8,12 +8,41 @@ import configparser
 import re
 import json
 import yaml
-
+import requests
 from tqdm.auto import tqdm
 from git.remote import RemoteProgress
+GH_PROXY = os.getenv('GH_PROXY')
+HF_ENDPOINT = os.getenv('HF_ENDPOINT')
 
-sys.path.append(os.path.join(os.path.dirname(__file__), "glob"))
-from manager_downloader import download_url
+
+def download_url(url, dest_folder, filename=None):
+    # Ensure the destination folder exists
+    if not os.path.exists(dest_folder):
+        os.makedirs(dest_folder)
+
+    # Extract filename from URL if not provided
+    if filename is None:
+        filename = os.path.basename(url)
+
+    # Full path to save the file
+    dest_path = os.path.join(dest_folder, filename)
+
+    if GH_PROXY:
+        if url.startswith('https://github.com') or url.startswith('https://raw.githubusercontent.com'):
+            url=f"{GH_PROXY}/{url}"
+    if HF_ENDPOINT:
+        url=url.replace('https://huggingface.co/','https://hf-mirror.com/')
+
+    # Download the file
+    response = requests.get(url, stream=True)
+    if response.status_code == 200:
+        with open(dest_path, 'wb') as file:
+            for chunk in response.iter_content(chunk_size=1024):
+                if chunk:
+                    file.write(chunk)
+    else:
+        print(f"Failed to download file from {url}")
+
 
 config_path = os.path.join(os.path.dirname(__file__), "config.ini")
 nodelist_path = os.path.join(os.path.dirname(__file__), "custom-node-list.json")
